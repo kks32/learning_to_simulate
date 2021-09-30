@@ -20,6 +20,11 @@ If you use the code here please cite this paper:
       year={2020}
     }
 
+## Install on TACC
+```
+module load cuda/10.0
+module load cudnn/7.6.2
+```
 
 ## Example usage: train a model and display a trajectory
 

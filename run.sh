@@ -19,23 +19,23 @@ set -e
 # Display commands being run.
 set -x
 
-TMP_DIR=`mktemp -d`
+TMP_DIR="/work/05873/kks32/frontera/"
 
 virtualenv --python=python3.6 "${TMP_DIR}/learning_to_simulate"
 source "${TMP_DIR}/learning_to_simulate/bin/activate"
 
 # Install dependencies.
-pip install --upgrade -r learning_to_simulate/requirements.txt
+pip install --upgrade -r requirements.txt
 
 # Run the simple demo with dummy inputs.
-python -m learning_to_simulate.model_demo
+#python -m learning_to_simulate.model_demo
 
 # Run some training and evaluation in one of the dataset samples.
 
 # Download a sample of a dataset.
 DATASET_NAME="WaterDropSample"
 
-bash ./learning_to_simulate/download_dataset.sh ${DATASET_NAME} "${TMP_DIR}/datasets"
+bash ./download_dataset.sh ${DATASET_NAME} "${TMP_DIR}/datasets"
 
 # Train for a few steps.
 DATA_PATH="${TMP_DIR}/datasets/${DATASET_NAME}"
