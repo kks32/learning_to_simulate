@@ -62,8 +62,8 @@ def main(unused_argv):
 
   plot_info = []
   for ax_i, (label, rollout_field) in enumerate(
-      [("Ground truth", "ground_truth_rollout"),
-       ("Prediction", "predicted_rollout")]):
+      [("MPM", "ground_truth_rollout"),
+       ("GNS", "predicted_rollout")]):
     # Append the initial positions to get the full trajectory.
     trajectory = np.concatenate([
         rollout_data["initial_positions"],
@@ -96,6 +96,8 @@ def main(unused_argv):
   unused_animation = animation.FuncAnimation(
       fig, update,
       frames=np.arange(0, num_steps, FLAGS.step_stride), interval=10)
+  
+  unused_animation.save('rollout.gif', dpi=80, fps=30, writer='imagemagick')    
   plt.show(block=FLAGS.block_on_show)
 
 

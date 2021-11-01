@@ -1,4 +1,5 @@
 absl-py
+autopep8
 graph-nets>=1.1
 tensorflow>=1.15,<2
 tensorflow-gpu>=1.15,<2
