@@ -19,13 +19,16 @@ set -e
 # Display commands being run.
 set -x
 
+module load cuda/10.0
+module load cudnn/7.6.2
+
 TMP_DIR="/work/05873/kks32/frontera/"
 
 virtualenv --python=python3.6 "${TMP_DIR}/learning_to_simulate/env"
 source "${TMP_DIR}/learning_to_simulate/env/bin/activate"
 
 # Install dependencies.
-pip install --upgrade -r requirements.txt
+pip install -r requirements.txt
 
 # Run the simple demo with dummy inputs.
 #python -m learning_to_simulate.model_demo
