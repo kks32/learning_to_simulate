@@ -21,8 +21,8 @@ set -x
 
 TMP_DIR="/work/05873/kks32/frontera/"
 
-virtualenv --python=python3.6 "${TMP_DIR}/learning_to_simulate"
-source "${TMP_DIR}/learning_to_simulate/bin/activate"
+virtualenv --python=python3.6 "${TMP_DIR}/learning_to_simulate/env"
+source "${TMP_DIR}/learning_to_simulate/env/bin/activate"
 
 # Install dependencies.
 pip install --upgrade -r requirements.txt
