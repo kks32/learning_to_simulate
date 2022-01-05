@@ -2,7 +2,7 @@ absl-py
 autopep8
 graph-nets>=1.1
 tensorflow>=1.15,<2
-tensorflow-gpu>=1.15,<2
+tensorflow-gpu==1.15
 numpy
 dm-sonnet<2
 tensorflow_probability<0.9
