@@ -1,0 +1,6 @@
+__pycache__
+venv
+scratch
+
+slurm_scripts/logs_sandramps
+slurm_scripts/logs_sand-20M
